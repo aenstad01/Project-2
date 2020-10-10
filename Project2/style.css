@@ -1,0 +1,52 @@
+.navbar-brand {
+    padding: 0;
+  }
+
+
+/* Style the Nav Links */
+    .nav-link {
+        padding-top: 90px;
+        padding-bottom: 0;
+        height: 10px;
+        line-height: 10px;
+        /* padding-left: 20px;
+        padding-right: 20px; */
+        color: black;
+    }
+
+    .nav-link:hover {
+        color: #ffc229;
+    }
+
+/* Testing */
+    #current-nav-link {
+        color: grey;
+    }
+
+
+.content {
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+/* Bunny Animation */
+    .bunny-row {
+        width:200px;
+        height:200px;
+        content:url("Resources/assets/bunny-static.png");
+    }
+
+
+    .bunny-row:hover {
+        width:200px;
+        height:200px;
+        content:url("Resources/assets/bunny-short-gif.png");
+    }
+
+
+#meet-the-team {
+    background-color: lightgrey;
+}
+
+
