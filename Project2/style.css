@@ -18,6 +18,10 @@
         color: #ffc229;
     }
 
+.active {
+    color: light-grey;
+}
+
 /* Testing */
     #current-nav-link {
         color: grey;
@@ -43,7 +47,13 @@
         width:200px;
         height:200px;
         content:url("Resources/assets/bunny-short-gif.png");
+        
     }
+
+
+
+
+
 
 
 #meet-the-team {
@@ -51,3 +61,19 @@
 }
 
 
+
+
+
+
+button {
+    margin:20px;
+    position: relative;
+    padding-left: 100px;
+}
+.caret {
+    position: absolute;
+    bottom: 1px;
+    right: 100px;
+    text-align: right;
+
+}
