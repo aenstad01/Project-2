@@ -39,14 +39,14 @@
     .bunny-row {
         width:200px;
         height:200px;
-        content:url("Resources/assets/bunny-static.png");
+        content:url("../../Resources/Assets/bunny-static.png");
     }
 
 
     .bunny-row:hover {
         width:200px;
         height:200px;
-        content:url("Resources/assets/bunny-short-gif.png");
+        content:url("../../Resources/assets/bunny-short-gif.png");
         
     }
 
