@@ -1,17 +1,43 @@
 // Test
-var data = [{
-    abv: "1/1/2010",
-    ibu: "benton",
-    id: "ar",
-    name: "us",
-    style: "circle",
-    brewery_id: "5 mins.",
-    ounces: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
-  }];
+var example_data = [{
+    abv: 0.6,
+    ibu: 6,
+    id: 12345,
+    name: "Raspberry Sour",
+    style: "Sour",
+    brewery_id: 77777,
+    ounces: 8,
+    ibuRange: "med"
+  },
+  {
+    abv: 0.9,
+    ibu: 6,
+    id: 23456,
+    name: "Peanut Butter Porter",
+    style: "Porter",
+    brewery_id: 88888,
+    ounces: 8,
+    ibuRange: "med"
+  },
+  {
+    abv: 0.6,
+    ibu: 2,
+    id: 34567,
+    name: "Raspberry Sour",
+    style: "Sour",
+    brewery_id: 99999,
+    ounces: 6,
+    ibuRange: "Not very bitter"
+  },
+
+];
+
+
+
 
 
 // From data.js
-var tableData = data;
+var tableData = example_data;
 
 // Create a variable for the table body
 var tbody = d3.select("tbody");
@@ -24,12 +50,12 @@ function decodeHtml(html) {
 }
 
 // Use forEach to loop through all tableData and insert the data into the table
-tableData.forEach(function(sighting) {
+tableData.forEach(function(beer) {
     // Create a new table row for each UFO sighting
     var row = tbody.append("tr");
 
     // Update that row with the data for that UFO sighting
-    Object.entries(sighting).forEach(function([key, value]) {
+    Object.entries(beer).forEach(function([key, value]) {
         var cell = row.append("td");
         cell.text(value);
 
@@ -37,6 +63,7 @@ tableData.forEach(function(sighting) {
 });
 
 var button = d3.selectAll(".filter");
+
 
 var filters = {}
 
@@ -51,25 +78,30 @@ function runEnter() {
     var inputSelection = d3.select(this).select("input");
 
     var inputId = inputSelection.attr("id");
+
     
     var inputValue = inputSelection.property("value");
 
-    filters[inputId] = inputValue;
+
+    filters[inputId] = inputValue
 
     var newData = tableData;
 
     // filter by filters object
     Object.entries(filters).forEach(function([key, value]) {
 
-        newData = newData.filter(x => x[key] === value);
+        // Filter by substring
+        newData = newData.filter(x => x[key].includes(value));
         console.log(newData);
-    });        
+    });  
+    
 
-    newData.forEach(function(sighting) {
+
+    newData.forEach(function(beer) {
             var row = tbody.append("tr");
 
             // Update the row with the data for that UFO sighting
-            Object.entries(sighting).forEach(function([key, value]) {
+            Object.entries(beer).forEach(function([key, value]) {
                     var cell = row.append("td");
                     cell.text(value);
 
