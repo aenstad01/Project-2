@@ -1,5 +1,3 @@
-
-
 // Sliding bar for Recommendations page
 
 var slider = document.getElementById("myRange");

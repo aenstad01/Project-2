@@ -1,7 +1,9 @@
+// Populate BeerDb
+const beerDbUrl = "../Resources/Data/beerDbJson.json"
 
-
-// From data.js
 var tableData = data;
+console.log(tableData)
+
 
 // Create a variable for the table body
 var tbody = d3.select("tbody");
@@ -13,19 +15,22 @@ function decodeHtml(html) {
     return txt.value;
 }
 
-// Use forEach to loop through all tableData and insert the data into the table
-tableData.forEach(function(beer) {
-
-    // Create a new table row for each UFO sighting
-    var row = tbody.append("tr");
-
-    // Update that row with the data for that UFO sighting
-    Object.entries(beer).forEach(function([key, value]) {
-        var cell = row.append("td");
-        cell.text(value);
-
+// function that loads json Url into a table body
+function loadTableData(dataUrl,datasetBody){
+    d3.json(dataUrl).then((beerData) => {
+        beerData.forEach((rowData) => {
+            var row = datasetBody.append("tr");
+            Object.entries(rowData).forEach(([key, value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+            });
+        });
     });
-});
+};
+
+// load the full BeerDb
+loadTableData(beerDbUrl,tbody);
+
 
 var button = d3.selectAll(".filter");
 
@@ -34,6 +39,7 @@ var filters = {}
 
 function runEnter() {
 
+    // clear existing table
     tbody.html("");
 
     // Prevent the page from refreshing
@@ -49,29 +55,30 @@ function runEnter() {
 
 
     filters[inputId] = inputValue
-
-    var newData = tableData;
-
-    // filter by filters object
-    Object.entries(filters).forEach(function([key, value]) {
-
-        // Filter by substring
-        newData = newData.filter(x => x[key].includes(value));
-        console.log(newData);
-    });  
     
+    // example filters : {beer_name: "Ale"}
+    // console.log(filters)
 
+    d3.json(beerDbUrl).then((beerData) => {
 
-    newData.forEach(function(beer) {
-            var row = tbody.append("tr");
+        Object.entries(filters).forEach(function([key, value]) {
 
-            // Update the row with the data for that UFO sighting
-            Object.entries(beer).forEach(function([key, value]) {
-                    var cell = row.append("td");
-                    cell.text(value);
+                // Filter by substring
+                var filteredData = beerData.filter(x => x[key].includes(value));
+                filteredData.forEach(function(beer) {
+                    var row = tbody.append("tr");
+                    // Update the row with the data matches the filter
+                    Object.entries(beer).forEach(function([key, value]) {
+                            var cell = row.append("td");
+                            cell.text(value);
+        
+                    });
+                });
+                
+            });  
 
-        });
     });
+
 };
 
 button.on("change", runEnter);

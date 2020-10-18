@@ -27,7 +27,8 @@ breweries = Base.classes.breweries
 # Flask Setup
 #################################################
 app = Flask(__name__)
-
+# prevent key sorting from jsonify
+app.config['JSON_SORT_KEYS'] = False
 
 #################################################
 # Flask Routes
