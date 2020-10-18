@@ -1,43 +1,7 @@
-// Test
-var example_data = [{
-    abv: 0.6,
-    ibu: 6,
-    id: 12345,
-    name: "Raspberry Sour",
-    style: "Sour",
-    brewery_id: 77777,
-    ounces: 8,
-    ibuRange: "med"
-  },
-  {
-    abv: 0.9,
-    ibu: 6,
-    id: 23456,
-    name: "Peanut Butter Porter",
-    style: "Porter",
-    brewery_id: 88888,
-    ounces: 8,
-    ibuRange: "med"
-  },
-  {
-    abv: 0.6,
-    ibu: 2,
-    id: 34567,
-    name: "Raspberry Sour",
-    style: "Sour",
-    brewery_id: 99999,
-    ounces: 6,
-    ibuRange: "Not very bitter"
-  },
-
-];
-
-
-
 
 
 // From data.js
-var tableData = example_data;
+var tableData = data;
 
 // Create a variable for the table body
 var tbody = d3.select("tbody");
@@ -51,6 +15,7 @@ function decodeHtml(html) {
 
 // Use forEach to loop through all tableData and insert the data into the table
 tableData.forEach(function(beer) {
+
     // Create a new table row for each UFO sighting
     var row = tbody.append("tr");
 
