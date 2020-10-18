@@ -22,10 +22,9 @@
     color: light-grey;
 }
 
-/* Testing */
-    #current-nav-link {
-        color: grey;
-    }
+.table {
+    font-size: .7rem;
+}
 
 
 .content {
@@ -65,7 +64,7 @@ padding-left: 0px;
 /* Bitterness Slider */
     .slider {
         -webkit-appearance: none;
-        width: 100%;
+        width: 70%;
         height: 15px;
         border-radius: 5px;  
         background: #d3d3d3;
@@ -96,7 +95,7 @@ padding-left: 0px;
 /* Alcohol Slider */
 .alcSlider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 70%;
     height: 15px;
     border-radius: 5px;  
     background: #d3d3d3;
