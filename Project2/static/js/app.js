@@ -28,8 +28,8 @@ d3.json(beerDbUrl).then((beerData) => {
     });
 
 
+    
 var button = d3.selectAll(".filter");
-
 
 var filters = {}
 
@@ -45,21 +45,22 @@ function runEnter() {
     var inputSelection = d3.select(this).select("input");
 
     var inputId = inputSelection.attr("id");
-
     
     var inputValue = inputSelection.property("value");
-
-
+    
     filters[inputId] = inputValue
 
+    console.log(filters)
+
     d3.json(beerDbUrl).then((beerData) => {
-
+        
         Object.entries(filters).forEach(function([key, value]) {
+            // Filter by substring
+            var filteredData = beerData.filter(x => x[key] !== null && x[key].includes(value));
+            populateTable(filteredData,tbody)
+        });  
 
-                // Filter by substring
-                var filteredData = beerData.filter(x => x[key].includes(value));
-                populateTable(filteredData,tbody)
-            });  
+
 
     });
 
