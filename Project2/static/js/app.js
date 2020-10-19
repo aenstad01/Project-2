@@ -1,10 +1,6 @@
 // Populate BeerDb
 const beerDbUrl = "../Resources/Data/beerDbJson.json"
 
-var tableData = data;
-console.log(tableData)
-
-
 // Create a variable for the table body
 var tbody = d3.select("tbody");
 
@@ -15,21 +11,21 @@ function decodeHtml(html) {
     return txt.value;
 }
 
-// function that loads json Url into a table body
-function loadTableData(dataUrl,datasetBody){
-    d3.json(dataUrl).then((beerData) => {
-        beerData.forEach((rowData) => {
-            var row = datasetBody.append("tr");
-            Object.entries(rowData).forEach(([key, value]) => {
-            var cell = row.append("td");
-            cell.text(value);
-            });
+// function that populate table into a table body
+function populateTable(data,datasetBody){
+    data.forEach((rowData) => {
+        var row = datasetBody.append("tr");
+        Object.entries(rowData).forEach(([key, value]) => {
+        var cell = row.append("td");
+        cell.text(value);
         });
     });
 };
 
-// load the full BeerDb
-loadTableData(beerDbUrl,tbody);
+// load beer Db into the table
+d3.json(beerDbUrl).then((beerData) => {
+        populateTable(beerData,tbody)
+    });
 
 
 var button = d3.selectAll(".filter");
@@ -55,9 +51,6 @@ function runEnter() {
 
 
     filters[inputId] = inputValue
-    
-    // example filters : {beer_name: "Ale"}
-    // console.log(filters)
 
     d3.json(beerDbUrl).then((beerData) => {
 
@@ -65,16 +58,7 @@ function runEnter() {
 
                 // Filter by substring
                 var filteredData = beerData.filter(x => x[key].includes(value));
-                filteredData.forEach(function(beer) {
-                    var row = tbody.append("tr");
-                    // Update the row with the data matches the filter
-                    Object.entries(beer).forEach(function([key, value]) {
-                            var cell = row.append("td");
-                            cell.text(value);
-        
-                    });
-                });
-                
+                populateTable(filteredData,tbody)
             });  
 
     });
