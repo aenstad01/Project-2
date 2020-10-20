@@ -11,7 +11,7 @@ function decodeHtml(html) {
     return txt.value;
 }
 
-// function that populate table into a table body
+// function that populate data object into a html table body
 function populateTable(data,datasetBody){
     data.forEach((rowData) => {
         var row = datasetBody.append("tr");
@@ -27,9 +27,10 @@ d3.json(beerDbUrl).then((beerData) => {
         populateTable(beerData,tbody)
     });
 
-
+// select filter button
 var button = d3.selectAll(".filter");
 
+// initialize filters object
 var filters = {}
 
 function runEnter() {
@@ -47,6 +48,7 @@ function runEnter() {
     
     var inputValue = inputSelection.property("value");
     
+    // populate filters object
     filters[inputId] = inputValue
 
     d3.json(beerDbUrl).then((beerData) => {
@@ -59,6 +61,8 @@ function runEnter() {
 
             // clear the table
             tbody.html("");
+
+            // populate the table
             populateTable(filteredData,tbody)
 
       });
