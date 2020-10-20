@@ -28,7 +28,6 @@ d3.json(beerDbUrl).then((beerData) => {
     });
 
 
-    
 var button = d3.selectAll(".filter");
 
 var filters = {}
@@ -50,17 +49,19 @@ function runEnter() {
     
     filters[inputId] = inputValue
 
-    console.log(filters)
-
     d3.json(beerDbUrl).then((beerData) => {
-        
+
+        // initialize filteredData
+        var filteredData = beerData;
         Object.entries(filters).forEach(function([key, value]) {
             // Filter by substring
-            var filteredData = beerData.filter(x => x[key] !== null && x[key].includes(value));
+            filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+
+            // clear the table
+            tbody.html("");
             populateTable(filteredData,tbody)
-        });  
 
-
+      });
 
     });
 
