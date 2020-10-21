@@ -1,10 +1,12 @@
 // Sliding bar for Recommendations page
 
-var slider = document.getElementById("myRange");
+var slider = document.getElementById("ibu");
 var output = document.getElementById("selected-bitterness");
 
 
-output.innerHTML = slider.value; // Display the default slider value
+
+output.innerHTML = "";
+// output.innerHTML = slider.value; // Display the default slider value
 
 
 
@@ -27,9 +29,9 @@ slider.oninput = function() {
 
 
 
-var alcSlider = document.getElementById("myRange2");
+var alcSlider = document.getElementById("abv");
 var output2 = document.getElementById("selected-alcohol");
-output2.innerHTML = alcSlider.value; // Display the default slider value
+output2.innerHTML = ""; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 alcSlider.oninput = function() {
@@ -48,3 +50,4 @@ alcSlider.oninput = function() {
 
 
 // End of sliding bar
+
