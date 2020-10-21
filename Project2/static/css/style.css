@@ -28,6 +28,11 @@ button {
 }
 
 
+/* Style all links */
+
+    a {
+        color: navy;
+    }
 
 
 /* Nav Bar CSS */
@@ -194,5 +199,8 @@ button {
         background-color: lightgrey;
     }
 
+    #about-this-data {
+        text-align: left;
+    }
 
 /* End of About Us Page CSS */
