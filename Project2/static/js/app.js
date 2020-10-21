@@ -49,16 +49,19 @@ function runEnter() {
     var inputSelection = d3.select(this).select("input");
 
     var inputId = inputSelection.attr("id");
-    
+
     var inputValue = inputSelection.property("value");
-    
+
+
     // populate filters object
     filters[inputId] = inputValue
+
 
     d3.json(beerDbUrl).then((beerData) => {
 
         // initialize filteredData
         var filteredData = beerData;
+
         Object.entries(filters).forEach(function([key, value]) {
             // Filter by substring
             filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));

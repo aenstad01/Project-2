@@ -16,6 +16,12 @@
     <!-- Import version 5 of D3 -->
     <script src="https://d3js.org/d3.v5.js"></script>
 
+    <!-- Import resources for the multi range slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.css"></script>
+
+
+
 
 
 </head>
@@ -78,7 +84,7 @@
                                                     placeholder="(Lager, Sour, etc)">
                                             </li>
 
-                                        </div> 
+                                        </div>
 
                                         <!-- test -->
 
@@ -180,12 +186,13 @@
                                         </div> -->
                                         <!-- Test -->
 
+
                                         <li class="filter list-group-item">
 
                                             <p>Select Bitterness:</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="3" value="2" class="slider"
-                                                    id="myRange">
+                                                    id="ibu">
                                                 <p><span id="selected-bitterness"></span></p>
                                             </div>
                                         </li>
@@ -195,7 +202,7 @@
                                             <p>Select Alcohol Content:</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="3" value="" class="alcSlider"
-                                                    id="myRange2">
+                                                    id="abv">
                                                 <p><span id="selected-alcohol"></span></p>
                                             </div>
                                         </li>
@@ -212,24 +219,22 @@
                                     </li>
                                     <li class="filter list-group-item">
                                         <label for="date">City</label>
-                                        <input class="form-check" type="text" placeholder="City"
-                                            id="city">
+                                        <input class="form-check" type="text" placeholder="City" id="city">
                                     </li>
                                     <li class="filter list-group-item">
                                         <label for="date">State</label>
-                                        <input class="form-check" type="text" placeholder="State"
-                                            id="state">
+                                        <input class="form-check" type="text" placeholder="State" id="state">
                                     </li>
 
 
-                               </div>
+                                </div>
 
                         </div>
 
                         </ul>
                     </div>
 
-                    
+
                     <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
                     </form>
             </div>
@@ -240,16 +245,16 @@
                     <table id="recommendations" class="table table-striped">
                         <thead>
                             <tr>
-                                <th class="table-head">beer_id</th>
-                                <th class="table-head">beer_name</th>
-                                <th class="table-head">beer_style</th>
-                                <th class="table-head">abv</th>
-                                <th class="table-head">ibu</th>
-                                <th class="table-head">ounces</th>
-                                <th class="table-head">brewery_id</th>
-                                <th class="table-head">brewery_name</th>
-                                <th class="table-head">city</th>
-                                <th class="table-head">state</th>
+                                <th class="table-head">Beer ID</th>
+                                <th class="table-head">Beer Name</th>
+                                <th class="table-head">Beer Style</th>
+                                <th class="table-head">ABV</th>
+                                <th class="table-head">IBU</th>
+                                <th class="table-head">Ounces</th>
+                                <th class="table-head">Brewery ID</th>
+                                <th class="table-head">Brewery Name</th>
+                                <th class="table-head">City</th>
+                                <th class="table-head">State</th>
                             </tr>
                         </thead>
                         <tbody>
