@@ -12,7 +12,7 @@ import numpy as np
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:///sqlite route/beersDb.sqlite")
+engine = create_engine("sqlite:///sqlite/beersDb.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
