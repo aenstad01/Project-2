@@ -16,8 +16,12 @@ function populateTable(data,datasetBody){
     data.forEach((rowData) => {
         var row = datasetBody.append("tr");
         Object.entries(rowData).forEach(([key, value]) => {
-        var cell = row.append("td");
-        cell.text(value);
+            // round abv to 4 decimal places
+            if (key === 'abv' && value !== null ){
+                value = value.toFixed(4);
+            }
+            var cell = row.append("td");
+            cell.text(value);
         });
     });
 };
