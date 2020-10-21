@@ -60,8 +60,10 @@ function runEnter() {
         // initialize filteredData
         var filteredData = beerData;
         Object.entries(filters).forEach(function([key, value]) {
+
             // Filter by substring
-            filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+            // case insensitive
+            filteredData = filteredData.filter(x => x[key] !== null && x[key].toLowerCase().includes(value.toLowerCase()));
 
             // clear the table
             tbody.html("");
