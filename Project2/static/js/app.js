@@ -1,5 +1,5 @@
 // Populate BeerDb
-const beerDbUrl = "../Resources/Data/beerDbJson.json"
+const beerDbUrl = "/api/beersBrewJoin"
 
 // Create a variable for the table body
 var tbody = d3.select("tbody");

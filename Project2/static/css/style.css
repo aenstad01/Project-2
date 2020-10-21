@@ -173,14 +173,14 @@ padding-left: 0px;
     .bunny-row {
         width:200px;
         height:200px;
-        content:url("../../Resources/Assets/bunny-static.png");
+        content:url("../Assets/bunny-static.png");
     }
 
 
     .bunny-row:hover {
         width:200px;
         height:200px;
-        content:url("../../Resources/assets/bunny-short-gif.png");
+        content:url("../Assets/bunny-short-gif.png");
         
     }
 
