@@ -81,14 +81,17 @@ function runEnter() {
         Object.entries(filters).forEach(function([key, value]) {
 
             if (key === "ibuRange"){
-                updateSliderInput("selected-bitterness",value); 
+                updateSliderInput("selected-bitterness",value);
+                filteredData = filteredData.filter(x => x[key] !== null && x["ibu"] <= parseFloat(value));
             }
             else if  (key === "abvRange") {
-                updateSliderInput("selected-alcohol",value) 
-            };
-
-            // Filter by substring
-            // filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+                updateSliderInput("selected-alcohol",value); 
+                filteredData = filteredData.filter(x => x[key] !== null && x["abv"] <= parseFloat(value));
+            }
+            else {
+                // Filter by substring
+                filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+            }; 
 
             // clear the table
             tbody.html("");
