@@ -59,16 +59,17 @@ def recomendationRoute():
 # serve  the map page html
 @app.route("/map.html")
 def mapRoute():
-    """This runs the browser and load the index route"""
+    """This runs the browser and load the map route"""
     mapWebPage = render_template("map.html")
     return mapWebPage    
 
 # serve  the about-this-data page html
 @app.route("/about-this-data.html")
 def aboutThisDataRoute():
-    """This runs the browser and load the index route"""
+    """This runs the browser and load the abt this data route"""
     aboutDataWebPage = render_template("about-this-data.html")
     return aboutDataWebPage    
+
 
 # create api for the database
 # api end-point for beers
