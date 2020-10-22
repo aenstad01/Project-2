@@ -37,6 +37,13 @@ app.config['JSON_SORT_KEYS'] = False
 
 # serve  the home page html
 @app.route("/")
+def homeRoute():
+    """This runs the browser and load the index route"""
+    indexWebPage = render_template("index.html")
+    return indexWebPage  
+
+# serve  the index page html
+@app.route("/index.html")
 def IndexRoute():
     """This runs the browser and load the index route"""
     indexWebPage = render_template("index.html")

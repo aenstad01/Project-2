@@ -1,4 +1,4 @@
-// Populate BeerDb
+// BeerDb
 const beerDbUrl = "/api/beersBrewJoin"
 
 // Create a variable for the table body
@@ -106,3 +106,4 @@ function runEnter() {
 };
 
 button.on("change", runEnter);
+
