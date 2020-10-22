@@ -1,4 +1,3 @@
-prompt("Are your 21 Years Old Or Not");
 
 // Populate BeerDb
 const beerDbUrl = "../Resources/Data/beerDbJson.json"
