@@ -27,10 +27,40 @@ button {
 
 }
 
+/* Homepage CSS */
+
+    #button-row {
+        justify-content: center;
+    }
+
+.btn {
+    color: black;
+    background-color: transparent;
+    border: dotted;
+    border-color: #ffc229
+}
+
+.btn:hover {
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border-color: #ffc229
+
+}
+
+.button-link {
+    color: black;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    text-decoration: none;
+    color: black;
+}
 
 /* Style all links */
 
-    a {
+    .link {
         color: navy;
     }
 
@@ -204,3 +234,4 @@ button {
     }
 
 /* End of About Us Page CSS */
+
