@@ -14,8 +14,8 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <!-- Add a favicon -->
-    <link rel="shortcut icon" href="../Resources/Assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../Resources/Assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/Assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/Assets/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -45,20 +45,113 @@
     </nav>
 
     <!-- Header -->
-    <div class="header">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Analysis Page</h3>
+
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+              <h2>Beer by the Numbers</h2>
+              <p>words</p>
             </div>
+          </div>
         </div>
-    </div>
-
-
-
-    <!-- Barbara's page! We will include some sort of visualization here -->
-
-
-
+      
+        <div class="container">
+        <!-- Dropdown menu -->
+        <div class="d-flex justify-content-center">
+        <!-- <div class="row"> -->
+          <div class="col-md-12">
+            <div class="well">
+              <h5>Beer by the Lines</h5>
+              <h6>Choose a style</h6>
+              <select id="selBeerFamily">
+                <option value="1">Pale Ales</option>
+                <option value="2">Dark Lager</option>
+                <option value="3">Brown Ale</option>
+                <option value="4">India Pale Ale</option>
+                <option value="5">Wheat Beers</option>
+                <option value="6">Strong Ales</option>
+                <option value="7">Belgian Styles</option>
+                <option value="8">Hybrid Beers</option>
+                <option value="9">Porter</option>
+                <option value="10">Stouts</option>
+                <option value="11">Bocks</option>
+                <option value="12">Scottish-Style Ales</option>
+                <option value="13">Wild/Sour Beers</option>
+                <option value="14">Pilseners and Pale Lager</option>
+                <option value="15">Specialty Beers</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </div>
+      
+      
+        <div class="container">
+          <!-- Divs for charts -->
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div id="plot0"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div id="plot1"></div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div id="plot2"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div id="plot3"></div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div id="plot4"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div id="plot5"></div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div id="plot6"></div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <div id="plot7"></div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <div id="plot8"></div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <div id="plot9"></div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <div id="plot10"></div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <div id="plot11"></div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <div id="plot12"></div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <div id="plot13"></div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -80,8 +173,13 @@
     <script type="text/javascript"
         src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
+        
+    <!-- Import D3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+
     <!-- Import the main JavaScript code. -->
-    <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/analysis.js"></script>
 
     <!-- mystery scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
