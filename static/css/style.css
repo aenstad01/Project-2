@@ -176,7 +176,7 @@ button {
     }
 
 
-/* ########  End of Recommendations Page CSS  ########*/
+/* End of Recommendations Page CSS */
 
 
 
@@ -201,15 +201,12 @@ button {
 /* ########   End of Map Page CSS   ########*/
 
 
-
-
 /* Bunny Animation */
     .bunny-row {
         width:200px;
         height:200px;
         content:url("../Assets/bunny-static6.png");
     }
-
 
     .bunny-row:hover {
         width:200px;
@@ -218,7 +215,18 @@ button {
         
     }
 
+    .bunny-row-hidden {
+        width:10px;
+        height:10px;
+        content:url("../Assets/bunny-static6.png");
+    }
 
+    .bunny-row-hidden:hover {
+        width:100px;
+        height:100px;
+        content:url("../Assets/bunny-gif2.gif");
+        
+    }
 
 /* About Us Page CSS */
     #meet-the-team {
