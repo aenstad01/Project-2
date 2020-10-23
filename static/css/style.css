@@ -1,9 +1,8 @@
 /* D3 plot */
-#beerData {
-    border-radius: 8px;
-  }
+    #beerData {
+        border-radius: 8px;
+    }
   
-
   .chart::before {
     position: absolute;
     top: 50px;
@@ -63,10 +62,10 @@
   }
   
 
-
-.navbar-brand {
-    padding: 0;
-  }
+/* Navbar CSS */
+    .navbar-brand {
+        padding: 0;
+    }
 
 
 /* Style the Nav Links */
@@ -84,9 +83,12 @@
         color: #ffc229;
     }
 
-.active {
-    color: light-grey;
-}
+    .active {
+        color: light-grey;
+    }
+
+/* End of Navbar CSS */
+
 
 .table {
     font-size: .7rem;
@@ -123,30 +125,30 @@ button {
         justify-content: center;
     }
 
-.btn {
-    color: black;
-    background-color: transparent;
-    border: dotted;
-    border-color: #ffc229
-}
+    .btn {
+        color: black;
+        background-color: #f8f9fa;
+        border: dotted;
+        border-color: #ffc229
+    }
 
-.btn:hover {
-    font-weight: bold;
-    background-color: transparent;
-    color: black;
-    border-color: #ffc229
+    .btn:hover {
+        font-weight: bold;
+        background-color: #f8f9fa;
+        color: black;
+        border-color: #ffc229
 
-}
+    }
 
-.button-link {
-    color: rgb(58, 58, 58);
-    text-decoration: none;
-}
+    .button-link {
+        color: rgb(58, 58, 58);
+        text-decoration: none;
+    }
 
-.button-link:hover {
-    text-decoration: none;
-    color: black;
-}
+    .button-link:hover {
+        text-decoration: none;
+        color: black;
+    }
 
 /* Style all links */
 
@@ -155,38 +157,7 @@ button {
     }
 
 
-/* Nav Bar CSS */
-
-    .navbar-brand {
-        padding: 0;
-      }
-
-        .nav-link {
-            padding-top: 90px;
-            padding-bottom: 0;
-            height: 10px;
-            line-height: 10px;
-            /* padding-left: 20px;
-            padding-right: 20px; */
-            color: black;
-        }
-
-        .nav-link:hover {
-            color: #ffc229;
-        }
-
-        .active {
-            color: light-grey;
-        }
-
-/* End of Nav Bar CSS */
-
-
-
-
 /* Recommendations Page CSS */
-
-
     .filters {
     padding-left: 0px;
     }
