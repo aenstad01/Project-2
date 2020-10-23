@@ -1,0 +1,3 @@
+api_key = "65iVvvgkBUN_P0Dd8VY3OZ9NcC0WO8hc3aQwAktg4Nqp_msv56vTiOrxhJ5Y9ZZDEPEi45KVR9prAYbyddZfIGI4WS0akIdxr_FRiS9zhAOxZrpfTxPPq4D2JfqIX3Yx"
+
+mapbox_api_key = "pk.eyJ1IjoibWpydXNzZWxsIiwiYSI6ImNrZnk1Y3h5ZTA5MWUycW9kdXBkanB1ZG8ifQ.Cio_fkzB5WY7i9e7S6cnAA"
