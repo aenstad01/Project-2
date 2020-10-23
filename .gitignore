@@ -133,6 +133,4 @@ dmypy.json
 
 # ignore config.py
 config.py
-
-# ignore checkpoints
-.ipynb_checkpoints
+config.js

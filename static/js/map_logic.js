@@ -11,9 +11,6 @@ var breweryMarkers = [];
 for (var i = 0; i < brewData.length; i++) {
   brewData[i].location = [brewData[i].coordinates.latitude, brewData[i].coordinates.longitude]
 
-// Check Data
-console.log(brewData);
-console.log(brewData[i].location);
 
   // loop through the cities array, create a new marker, push it to the cityMarkers array
   breweryMarkers.push(
@@ -46,4 +43,6 @@ var overlayMaps = {
   "Breweries": breweryLayer
 };
 
-L.control.layers(baseMaps, overlayMaps).addTo(myMap);
+L.control.layers(baseMaps, overlayMaps, {
+  collapsed: false
+}).addTo(myMap);
