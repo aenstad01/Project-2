@@ -1,4 +1,1 @@
-console.log("hi");
-
-const MAPBOX_API_KEY = "pk.eyJ1IjoiYWVuc3RhZDAxIiwiYSI6ImNrZnk0Z29hYzFqZzAydHA5N3d0Z2RvaXIifQ.Wfcgq9PBbDMq7KQSJIKw1Q";
-
+mapbox_api_key = "pk.eyJ1IjoibWpydXNzZWxsIiwiYSI6ImNrZnk1Y3h5ZTA5MWUycW9kdXBkanB1ZG8ifQ.Cio_fkzB5WY7i9e7S6cnAA"
