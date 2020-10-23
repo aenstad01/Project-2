@@ -254,13 +254,12 @@ button {
 
 
 /* About Us Page CSS */
-
-
     #meet-the-team {
-        background-color: lightgrey;
+        padding-top: 20px;
     }
 
     #about-this-data {
+        padding-top: 20px;
         text-align: left;
     }
 
