@@ -285,14 +285,22 @@ button {
     .bunny-row {
         width:200px;
         height:200px;
+<<<<<<< Updated upstream:Project2/static/css/style.css
         content:url("../../Resources/Assets/bunny-static.png");
+=======
+        content:url("../Assets/bunny-gif2.png");
+>>>>>>> Stashed changes:static/css/style.css
     }
 
 
     .bunny-row:hover {
         width:200px;
         height:200px;
+<<<<<<< Updated upstream:Project2/static/css/style.css
         content:url("../../Resources/assets/bunny-short-gif.png");
+=======
+        content:url("../Assets/bunny-gif3.gif");
+>>>>>>> Stashed changes:static/css/style.css
         
     }
 

@@ -1,6 +1,11 @@
 bubbly({
+<<<<<<< Updated upstream
     colorStart: "#F8F9FA",
     colorStop: "#F8F9FA",
+=======
+    colorStart: "#ffffff",
+    colorStop: "#ffffff",
+>>>>>>> Stashed changes
     blur: 1,
     compose: "source-over",
     radiusFunc: () => 4 + Math.random() * 25,
