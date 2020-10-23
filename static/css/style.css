@@ -139,7 +139,7 @@ button {
 }
 
 .button-link {
-    color: black;
+    color: rgb(58, 58, 58);
     text-decoration: none;
 }
 
@@ -251,11 +251,13 @@ button {
 
 /* About Us Page CSS */
     #meet-the-team {
+        background-color:rgba(245, 245, 245, 0.6);
         padding-top: 20px;
     }
 
     #about-this-data {
         padding-top: 20px;
+        background-color: rgba(245, 245, 245, 0.6);
         text-align: left;
     }
 
