@@ -129,9 +129,8 @@ d3.csv("resources/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
     var selectedOption = d3.select(this).property("value"); 
 
     // run the updateChart function with this selected option
-    console.log(selectedOption);
+  
     var selectedOptionData = normdata.filter(function(d) { return d.Style_family_code == selectedOption; });
-    console.log(selectedOptionData);
     styles = selectedOptionData.length;
 
     var chartdata0 = [
