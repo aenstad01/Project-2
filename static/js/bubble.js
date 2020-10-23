@@ -1,6 +1,6 @@
 bubbly({
-    colorStart: "#ffffff",
-    colorStop: "#ffffff",
+    colorStart: "#f8f9fa",
+    colorStop: "#f8f9fa",
     blur: 1,
     compose: "source-over",
     radiusFunc: () => 4 + Math.random() * 25,
