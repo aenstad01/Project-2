@@ -297,14 +297,14 @@ button {
     .bunny-row {
         width:200px;
         height:200px;
-        content:url("Assets/bunny-static.png");
+        content:url("../Assets/bunny-static6.png");
     }
 
 
     .bunny-row:hover {
         width:200px;
         height:200px;
-        content:url("Assets/bunny-short-gif.png");
+        content:url("../Assets/bunny-gif2.gif");
         
     }
 
