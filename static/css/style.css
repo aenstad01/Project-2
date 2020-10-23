@@ -3,6 +3,8 @@
     border-radius: 8px;
   }
   
+
+
   .chart::before {
     position: absolute;
     top: 50px;
@@ -36,21 +38,23 @@
   .axis-text {
     font-family: sans-serif;
     font-weight: bold;
-    fill: #551aaf;
+    fill: darkgrey;
     text-anchor: middle;
   }
   
+
+
   .active {
     font-weight: bold;
     fill: #000;
-    fill: #551aaf;
+    fill: darkgrey;
     transition: fill 0.3s ease-out;
     text-anchor: middle;
   }
   
   .inactive {
     font-weight: lighter;
-    fill: #551aaf;
+    fill: darkgrey;
     transition: fill 0.3s ease-out;
     text-anchor: middle;
   }
