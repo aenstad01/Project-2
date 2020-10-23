@@ -66,18 +66,18 @@ function runEnter() {
     var inputSelection = d3.select(this).select("input");
 
     var inputId = inputSelection.attr("id");
-    
+
     var inputValue = inputSelection.property("value");
-    
+
+
     // populate filters object
     filters[inputId] = inputValue
-
-    console.log(filters)
 
     d3.json(beerDbUrl).then((beerData) => {
 
         // initialize filteredData
         var filteredData = beerData;
+
         Object.entries(filters).forEach(function([key, value]) {
 
             if (key === "ibuRange"){

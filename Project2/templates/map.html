@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Map</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Our CSS -->
     <link rel="stylesheet" href="../static/css/style.css">
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
 
     <!-- Marker Cluster CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
 
     <!-- Import the Plotly library -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+<<<<<<< HEAD
   </head>
     
   <body>
@@ -57,43 +63,82 @@
 <div class="header">
     <div class="row">
         <div class="col-md-12">
+=======
+    <!-- Add a favicon -->
+    <link rel="shortcut icon" href="../Resources/Assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Resources/Assets/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar-brand-center navbar-light bg-light">
+        <div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="analysis.html">Beer Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recommendation.html">Get Recommendations</a>
+                </li>
+                <a href="index.html" class="navbar-brand img-responsive">
+                    <img class="logo" src="../Resources/assets/brewery-hopper-logo.png"></a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="map.html">Find a Local Brewery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-this-data.html">About this Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="row">
+            <div class="col-md-12">
+>>>>>>> d1763ec51fdbcd30e3bb55d67bb0bb2c812ad505
                 <h3>Map Page</h3>
+            </div>
         </div>
     </div>
-</div>
 
 
-<!-- Matt's page! We will be using the Yelp API and plotly to create a few maps -->
+    <!-- Matt's page! We will be using the Yelp API and plotly to create a few maps -->
 
-<!-- Placeholder for a map -->
+    <!-- Placeholder for a map -->
 
-<div class="container">
-    <div class="map-container">
-        <div class="map-frame">
+    <div class="container">
+        <div class="map-container">
+            <div class="map-frame">
 
-            <div id="map"></div>
+                <div id="map"></div>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
-<!-- End of Matt's code -->
+    <!-- End of Matt's code -->
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
 
 
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 
     <!-- Marker Cluster JS -->
-    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script type="text/javascript"
+        src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
 
 
@@ -103,7 +148,7 @@
 
     <!-- MAPBOX API key -->
     <script type="text/javascript" src="../static/js/config.js"></script>
-    
+
     <!-- Logic JS file used for building the maps -->
     <script type="text/javascript" src="../static/js/logic.js"></script>
 
@@ -112,6 +157,6 @@
     <script type="text/javascript" src="../static/js/main.js"></script> -->
 
 
-  </body>
-  
+</body>
+
 </html>
