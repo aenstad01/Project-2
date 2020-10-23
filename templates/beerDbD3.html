@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Brewery Hopper | About This Data</title>
-
-    <!-- Bootstrap CSS -->
+    <title>Brewery Hopper</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Our CSS -->
     <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Import the Plotly library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 
     <!-- Add a favicon -->
     <link rel="shortcut icon" href="../static/Assets/favicon.ico" type="image/x-icon">
@@ -38,49 +38,43 @@
                     <a class="nav-link" href="map.html">Find a Local Brewery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="about-this-data.html">About this Data</a>
+                    <a class="nav-link" href="about-this-data.html">About this Data</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+
     <!-- Summary -->
-    <div class="content">
+
+    <!-- Header -->
+    <div class="container">
         <div class="row">
-            <div class="col-md-8" id="about-this-data">
-                <h3>About this data</h3>
-                <h5>Here are the data sources we used to create this site:</h5>
-                <p><a href="analysis.html" class="link">Analysis Page</a>: (add data source here)</p>
-                <p><a href="recommendation.html" class="link">Get Recommendations Page</a>: Uses a <a
-                        href="https://www.kaggle.com/nickhould/craft-cans?select=beers.csv" class="link">Kaggle Craft
-                        Beers
-                        Dataset</a> to create a table that can be filtered down to specific beers, breweries, or types
-                    of beers.</p>
-                <p><a href="map.html" class="link">Map Page</a>: Uses the <a
-                        href="https://docs.developer.yelp.com/docs/yelp-knowledge" class="link">Yelp API</a> to pull in
-                    brewery
-                    locations and features.</p>
-
-            </div>
-
-            <div class="col-md-4" id="meet-the-team">
-                <h3>Meet our team</h3>
-                <p>Amanda Enstad</p>
-                <p>Chi Tran</p>
-                <p>Barbara MacGregor</p>
-                <p>Matt Russell</p>
-            </div>
-
+          <div class="col-md-12 jumbotron text-center">
+            <h2>Patterns in Beer Bitterness & Alcohol Content</h2>
+            <p><a href="https://www.kaggle.com/nickhould/craft-cans?select=beers.csv" class="link">(from Kaggle Craft Beers Dataset)</a></h5></p>
+          </div>
         </div>
-    </br>
-    </div>
+        <div class="chart"></div>
+      </div>
+
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <!-- Additional Bootstrap Scripts -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- Marker Cluster JS -->
+    <script type="text/javascript"
+        src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+
+    <!-- mystery scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -88,8 +82,11 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
-    <script type="text/javascript" src="../static/js/bubble.js"></script>
+    <!-- Add D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+    <script type="text/javascript" src="../static/js/plotD3.js"></script>
 
 </body>
 

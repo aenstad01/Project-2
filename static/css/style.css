@@ -186,26 +186,27 @@ button {
 
 
 /* Recommendations Page CSS */
-        .filters {
+    .filters {
+    padding-left: 0px;
+    }
+
+    .list-group-item {
+        border: none;
+    }
+
+    .d3Button {
         padding-left: 0px;
-
-        }
-
-        .list-group-item {
-            border: none;
         }
 
 
+/* Form Sections on Recommendations Page */
+    .form-section {
+        padding-top: 50px;
+    }
 
-   /* Form Sections on Recommendations Page */
-        .form-section {
-            padding-top: 50px;
-        }
-
-
-        #table-area {
-            padding-top:50px;
-        }
+    #table-area {
+        padding-top:50px;
+    }
 
 
 /* ########  End of Recommendations Page CSS  ########*/

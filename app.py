@@ -77,6 +77,12 @@ def aboutThisDataRoute():
     aboutDataWebPage = render_template("about-this-data.html")
     return aboutDataWebPage    
 
+# serve  the about-this-data page html
+@app.route("/beerDbD3.html")
+def beerDbD3Route():
+    """This runs the browser and load the abt this data route"""
+    beerDbD3WebPage = render_template("beerDbD3.html")
+    return beerDbD3WebPage    
 
 # create api for the database
 # api end-point for beers

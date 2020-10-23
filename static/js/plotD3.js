@@ -1,8 +1,8 @@
 // Populate BeerDb
 const beerDbUrl = "/api/beersBrewJoin"
 
-var svgWidth = 960;
-var svgHeight = 500;
+var svgWidth = 1100;
+var svgHeight = 700;
 
 var margin = {
   top: 20,
