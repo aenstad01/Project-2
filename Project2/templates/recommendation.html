@@ -32,7 +32,7 @@
                     <a class="nav-link active" href="recommendation.html">Get Recommendations</a>
                 </li>
                 <a href="index.html" class="navbar-brand img-responsive">
-                    <img class="logo" src="../Resources/assets/brewery-hopper-logo.png"></a>
+                    <img class="logo" src="../static/Assets/brewery-hopper-logo.png"></a>
                 <li class="nav-item">
                     <a class="nav-link" href="map.html">Explore Brewery Map</a>
                 </li>
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <!-- Amanda's code - add in filter bar - WORK IN PROGRESS -->
+    <!-- body -->
     <div class="container">
         <div class="row margin-top-50">
             <div class="col-md-4">
@@ -64,7 +64,7 @@
 
 
 
-                                        <div class="form-section">
+                                        <div class="form-section" id="searchByBeers">
                                             <h5>Search by Beer</h5>
 
                                             <li class="filter list-group-item">
@@ -83,126 +83,30 @@
                                         <!-- test -->
 
 
-                                        <!-- Checkboxes (not used right now) -->
-                                        <!-- 
-                                        <div class="checkboxes">
-                                            <li class="form-check">
-                                                <p>Select Alcohol Content:</p>
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck1">
-                                                <label class="form-check-label" for="defaultCheck1">
-                                                    Ale
-                                                </label>
-                                            </li>
-                                            <li class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck1">
-                                                <label class="form-check-label" for="defaultCheck1">
-                                                    Lager
-                                                </label>
-                                            </li>
-                                            <li class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck1">
-                                                <label class="form-check-label" for="defaultCheck1">
-                                                    Sour
-                                                </label>
-                                            </li>
-                                        </div> -->
-
-                                        <!-- Radio buttons -->
-                                        <!-- <div class="form-section">
-                                            <p>Select bitterness:</p>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="ibuRange" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Not very bitter
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Medium bitterness
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Bitter
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" checked="checked" type="radio"
-                                                    name="exampleRadios" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2" checked="checked">
-                                                    View All
-                                                </label>
-                                            </div>
-                                        </div> -->
-
-                                        <!-- Radio buttons - alcohol content -->
-                                        <!-- <div>
-                                            <div class="form-section">
-                                                <p>Select Alcohol Content:</p>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                                        id="alcohol-toggle" value="option1">
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                        Less Alchohol
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                                        id="exampleRadios2" value="option2">
-                                                    <label class="form-check-label" for="exampleRadios2">
-                                                        Average Alcohol
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                                        id="exampleRadios3" value="option2">
-                                                    <label class="form-check-label" for="exampleRadios2">
-                                                        ALL of the Alcohol
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                                        value="option2" checked="checked">
-                                                    <label class="form-check-label" for="exampleRadios2"
-                                                        checked="checked">
-                                                        View All
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                        <!-- Test -->
 
                                         <li class="filter list-group-item">
 
-                                            <p>Select Bitterness:</p>
+                                            <p>Select Bitterness (ibu):</p>
                                             <div class="slidecontainer">
-                                                <input type="range" min="1" max="3" value="2" class="slider"
-                                                    id="myRange">
-                                                <p><span id="selected-bitterness"></span></p>
+                                                <input type="range" min="4" max="139"  step= "15" class="ibuslider" value=139
+                                                    id="ibuRange">                                                 
+                                                <p><span id="selected-bitterness" value =""></span></p>
                                             </div>
                                         </li>
 
                                         <li class="filter list-group-item">
 
-                                            <p>Select Alcohol Content:</p>
+                                            <p>Select Alcohol Content (abv):</p>
                                             <div class="slidecontainer">
-                                                <input type="range" min="1" max="3" value="" class="alcSlider"
-                                                    id="myRange2">
-                                                <p><span id="selected-alcohol"></span></p>
+                                                <input type="range" min="0" max="0.15" step = "0.015" class="abvSlider"  value=0.15
+                                                    id="abvRange">
+                                                <p><span id="selected-alcohol" value=""></span></p>
                                             </div>
                                         </li>
 
                                 </div>
 
-                                <div class="form-section">
+                                <div class="form-section" id="searchByBrews">
 
                                     <h5>Search by Brewery</h5>
                                     <li class="filter list-group-item">
@@ -227,11 +131,13 @@
                         </div>
 
                         </ul>
+
                     </div>
 
                     
                     <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
                     </form>
+                    
             </div>
             </aside>
             <!-- Table -->
@@ -260,21 +166,6 @@
             </div>
 
 
-            <!-- End of Amanda's code -->
-
-
-
-
-            <!-- Chi's page! We will be creating a table of beer's then adding inputs for users to filter. The table will be created with SQLite -->
-
-
-
-
-
-
-            <!-- End of Chi's code -->
-
-
             <!-- Bootstrap JS -->
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -289,17 +180,6 @@
             <script type="text/javascript"
                 src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
-            <!-- Import the main JavaScript code. -->
-            <script type="text/javascript" src="../static/js/main.js"></script>
-
-            <!-- Data.json   -->
-            <script type="text/javascript" src="../Resources/Data/beerDbJson.json"></script>
-
-            <!-- App.js -->
-            <script type="text/javascript" src="../static/js/app.js"></script>
-
-
-
 
             <!-- mystery scripts -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -308,6 +188,10 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
                 integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
                 crossorigin="anonymous"></script>
+              
+
+            <!-- App.js -->
+            <script type="text/javascript" src="../static/js/app.js"></script>
 
 </body>
 

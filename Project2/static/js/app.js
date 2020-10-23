@@ -1,5 +1,5 @@
-// Populate BeerDb
-const beerDbUrl = "../Resources/Data/beerDbJson.json"
+// BeerDb
+const beerDbUrl = "/api/beersBrewJoin"
 
 // Create a variable for the table body
 var tbody = d3.select("tbody");
@@ -26,10 +26,27 @@ function populateTable(data,datasetBody){
     });
 };
 
+// function initialize slider values
+function initializeSliderInput(inputId,outputId) {
+    var slider = document.getElementById(inputId);
+    var output = document.getElementById(outputId);
+    output.innerHTML = slider.value;
+  };
+
+// function update slider value
+function updateSliderInput(outputId, value) {
+    var output = document.getElementById(outputId);
+    output.innerHTML = value;
+  };
+  
 // load beer Db into the table
 d3.json(beerDbUrl).then((beerData) => {
         populateTable(beerData,tbody)
     });
+
+//  initialize
+initializeSliderInput("ibuRange","selected-bitterness")
+initializeSliderInput("abvRange", "selected-alcohol")
 
 // select filter button
 var button = d3.selectAll(".filter");
@@ -55,15 +72,26 @@ function runEnter() {
     // populate filters object
     filters[inputId] = inputValue
 
+    console.log(filters)
+
     d3.json(beerDbUrl).then((beerData) => {
 
         // initialize filteredData
         var filteredData = beerData;
         Object.entries(filters).forEach(function([key, value]) {
 
-            // Filter by substring
-            // case insensitive
-            filteredData = filteredData.filter(x => x[key] !== null && x[key].toLowerCase().includes(value.toLowerCase()));
+            if (key === "ibuRange"){
+                updateSliderInput("selected-bitterness",value);
+                filteredData = filteredData.filter(x => x[key] !== null && x["ibu"] <= parseFloat(value));
+            }
+            else if  (key === "abvRange") {
+                updateSliderInput("selected-alcohol",value); 
+                filteredData = filteredData.filter(x => x[key] !== null && x["abv"] <= parseFloat(value));
+            }
+            else {
+                // Filter by substring
+                filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+            }; 
 
             // clear the table
             tbody.html("");
@@ -78,3 +106,4 @@ function runEnter() {
 };
 
 button.on("change", runEnter);
+
