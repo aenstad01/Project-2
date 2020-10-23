@@ -4,7 +4,6 @@
   }
   
 
-
   .chart::before {
     position: absolute;
     top: 50px;
@@ -186,6 +185,8 @@ button {
 
 
 /* Recommendations Page CSS */
+
+
     .filters {
     padding-left: 0px;
     }
@@ -198,14 +199,9 @@ button {
         padding-left: 0px;
         }
 
-
-/* Form Sections on Recommendations Page */
-    .form-section {
-        padding-top: 50px;
-    }
-
     #table-area {
         padding-top:50px;
+        height: 500px;
     }
 
 
