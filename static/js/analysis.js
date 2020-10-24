@@ -259,7 +259,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout0 = {
         title: { text: selectedOptionData[0].Style_family + ': ' + selectedOptionData[0].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -363,7 +363,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout2 = {
         title: { text: selectedOptionData[2].Style_family + ': ' + selectedOptionData[2].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -415,7 +415,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout3 = {
         title: { text: selectedOptionData[3].Style_family + ': ' + selectedOptionData[3].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -467,7 +467,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout4 = {
         title: { text: selectedOptionData[4].Style_family + ': ' + selectedOptionData[4].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -519,7 +519,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout5 = {
         title: { text: selectedOptionData[5].Style_family + ': ' + selectedOptionData[5].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -571,7 +571,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout6 = {
         title: { text: selectedOptionData[6].Style_family + ': ' + selectedOptionData[6].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -623,7 +623,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout7 = {
         title: { text: selectedOptionData[7].Style_family + ': ' + selectedOptionData[7].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -675,7 +675,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout8 = {
         title: { text: selectedOptionData[8].Style_family + ': ' + selectedOptionData[8].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -727,7 +727,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout9 = {
         title: { text: selectedOptionData[9].Style_family + ': ' + selectedOptionData[9].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -781,7 +781,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout10 = {
         title: { text: selectedOptionData[10].Style_family + ': ' + selectedOptionData[10].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -834,7 +834,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout11 = {
         title: { text: selectedOptionData[11].Style_family + ': ' + selectedOptionData[11].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
@@ -886,7 +886,7 @@ d3.csv("../static/data/craftbeerdotcom_beer_styles_for_table.csv").then(function
 
       var layout12 = {
         title: { text: selectedOptionData[12].Style_family + ': ' + selectedOptionData[12].Style },
-        showlegend: false,
+        showlegend: true,
         polar: {
           radialaxis: {
             visible: true,
