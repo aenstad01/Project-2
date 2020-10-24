@@ -90,7 +90,8 @@ function runEnter() {
             }
             else {
                 // Filter by substring
-                filteredData = filteredData.filter(x => x[key] !== null && x[key].includes(value));
+                // case insensitive
+                filteredData = filteredData.filter(x => x[key] !== null && x[key].toLowerCase().includes(value.toLowerCase()));
             }; 
 
             // clear the table

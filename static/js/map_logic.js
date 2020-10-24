@@ -47,7 +47,7 @@ for (var i = 0; i < brewData.length; i++) {
   // loop through the cities array, create a new marker, push it to the cityMarkers array
   breweryMarkers.push(
     L.marker(brewData[i].location)
-    .bindPopup("<h1>" + brewData[i].name + "</h1> <hr> <h2>Rating: " + brewData[i].rating + "</h2> <hr> <h2>No. of Reviews: " + brewData[i].review_count + "</h2>")
+    .bindPopup("<h3>" + brewData[i].name + "</h3> <hr> <h5>Rating: " + brewData[i].rating + "</h5> <hr> <h5>No. of Reviews: " + brewData[i].review_count + "</h5> <hr> <h5> <a href= " + brewData[i].url + 'target="_blank">Yelp URL</a></h5>')
   );
 }
 createMap(L.layerGroup(breweryMarkers));

@@ -80,7 +80,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      return (`Beer_Id: ${d.beer_id}<br>${label} ${d[chosenXAxis]}`);
+      return (`id#${d.beer_id}: ${d.beer_name}<br>${label} ${d[chosenXAxis]}`);
     });
 
   circlesGroup.call(toolTip);
@@ -101,6 +101,7 @@ d3.json(beerDbUrl).then(function(beerData, err) {
   if (err) throw err;
 
     // parse data
+    var allBeerName = [];
     beerData.forEach(function(data) {
     data.beer_ibu = +data.ibu;
     data.beer_id = +data.beer_id;
