@@ -2,187 +2,248 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Brewery Hopper | Beer Characteristics</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="../static/css/style.css">
+    <title>Brewery Hopper | Beer Characteristics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
 
-  <!-- Import the Plotly library -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Import the Plotly library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <!-- Add a favicon -->
-  <link rel="shortcut icon" href="../static/Assets/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="../static/Assets/favicon.ico" type="image/x-icon">
+    <!-- Add a favicon -->
+    <link rel="shortcut icon" href="../static/Assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/Assets/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar-brand-center navbar-light bg-light">
-    <div>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="analysis.html">Beer Characteristics</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="recommendation.html">Get Recommendations</a>
-        </li>
-        <a href="index.html" class="navbar-brand img-responsive">
-          <img class="logo" src="../static/Assets/brewery-hopper-logo.png">
-        </a>
-        <li class="nav-item">
-          <a class="nav-link" href="map.html">Find a Local Brewery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about-this-data.html">About this Data</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header -->
-
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 jumbotron text-center">
-          <h2>Beer by the Numbers</h2>
-          <p>words</p>
+    <!-- Navbar -->
+    <nav class="navbar-brand-center navbar-light bg-light">
+        <div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="analysis.html">Beer Characteristics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recommendation.html">Get Recommendations</a>
+                </li>
+                <a href="index.html" class="navbar-brand img-responsive">
+                    <img class="logo" src="../static/Assets/brewery-hopper-logo.png">
+                </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Find a Local Brewery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-this-data.html">About this Data</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="container">
-      <!-- Dropdown menu -->
-      <div class="d-flex justify-content-center">
-        <!-- <div class="row"> -->
-        <div class="col-md-12">
-          <div class="well">
-            <h5>Beer by the Lines</h5>
-            <h6>Choose a style</h6>
-            <select id="selBeerFamily">
-              <option value="1">Pale Ales</option>
-              <option value="2">Dark Lager</option>
-              <option value="3">Brown Ale</option>
-              <option value="4">India Pale Ale</option>
-              <option value="5">Wheat Beers</option>
-              <option value="6">Strong Ales</option>
-              <option value="7">Belgian Styles</option>
-              <option value="8">Hybrid Beers</option>
-              <option value="9">Porter</option>
-              <option value="10">Stouts</option>
-              <option value="11">Bocks</option>
-              <option value="12">Scottish-Style Ales</option>
-              <option value="13">Wild/Sour Beers</option>
-              <option value="14">Pilseners and Pale Lager</option>
-              <option value="15">Specialty Beers</option>
-            </select>
-          </div>
+    <!-- Header -->
+
+    <body>
+        <!-- Table of definitions -->
+        <div class="container">
+            <table class="table table-striped table-sm table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Definition</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">OG</th>
+                        <td>Original Gravity</td>
+                        <td>Density of the unfermented beer (relative to water)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">FG</th>
+                        <td>Final Gravity</td>
+                        <td>Density of the fermented beer (relative to water)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ABV</th>
+                        <td>Alcohol By Volume</td>
+                        <td>~As it says~</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IBU</th>
+                        <td>International Bitterness Units</td>
+                        <td>Specifically, 1 IBU = 1 mg of isomerized (exposed to heat) hop alpha acids per liter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">BU:GU</th>
+                        <td>Bitterness Ratio</td>
+                        <td>The ratio of bitterness (IBU) to sugars (Gravity Units, GU)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SRM</th>
+                        <td>Standard Reference Method</td>
+                        <td>Color, from light to dark </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CO<sub>2</sub> (v/v)</th>
+                        <td>Volumes of CO<sub>2</sub></td>
+                        <td>A measure of carbonation</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">AA</th>
+                        <td>Apparent attenuation</td>
+                        <td>A measure of malt sugar converted to ethanol during fermentation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div <!-- Dropdown menu -->
+        <div class="container" <div class="row">
+            <div class="col-md-12">
+                <div class="well">
+                    <h5></h5>
+                    <h4><b>Choose a style</b></h4>
+                    <select id="selBeerFamily">
+                        <option value="0" selected>Introduction </option>
+                        <option value="1">Pale Ales</option>
+                        <option value="2">Dark Lager</option>
+                        <option value="3">Brown Ale</option>
+                        <option value="4">India Pale Ale</option>
+                        <option value="5">Wheat Beers</option>
+                        <option value="6">Strong Ales</option>
+                        <option value="7">Belgian Styles</option>
+                        <option value="8">Hybrid Beers</option>
+                        <option value="9">Porter</option>
+                        <option value="10">Stouts</option>
+                        <option value="11">Bocks</option>
+                        <option value="12">Scottish-Style Ales</option>
+                        <option value="13">Wild/Sour Beers</option>
+                        <option value="14">Pilseners and Pale Lager</option>
+                        <option value="15">Specialty Beers</option>
+                    </select>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-      <!-- Divs for charts -->
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot0"></div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot1"></div>
+
+        <!-- Introductory chart and text -->
+        <div class="container" id="plotIntroBox">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="plotIntro"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card card-body">
+                        The "scatterpolar" charts show the maximum and minimum values of measured characteristics for
+                        each beer style within a style class, normalized to a 0 - 100% scale.
+                        <br><br>Maximum values for the whole sample set are shown in parentheses. Not all values were
+                        measured for all types.
+                        <br><br><b>Source:</b> 2020 CraftBeer.com Beer Styles Guide<br>(<html>
+                        http://www.craftbeer.com/beer-styles-guide
+
+                        </html>)<br> Published by the Brewers Association.
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot2"></div>
+        <!-- Divs for charts -->
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot0"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot1"></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot3"></div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot2"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot3"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot4"></div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot4"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot5"></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot5"></div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot6"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot7"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot6"></div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot8"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot9"></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot7"></div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot10"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot11"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot8"></div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div id="plot12"></div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div id="plot13"></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot9"></div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot10"></div>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot11"></div>
-        </div>
-      </div>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <div id="plot12"></div>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <div id="plot13"></div>
-        </div>
-      </div>
-    </div>
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+        <!-- Marker Cluster JS -->
+        <script type="text/javascript"
+            src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""></script>
-
-    <!-- Marker Cluster JS -->
-    <script type="text/javascript"
-      src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+        <!-- Import D3 -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
 
 
-    <!-- Import D3 -->
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+        <!-- Import the main JavaScript code. -->
+        <script type="text/javascript" src="static/js/analysis.js"></script>
 
-
-    <!-- Import the main JavaScript code. -->
-    <script type="text/javascript" src="static/js/analysis.js"></script>
-
-    <!-- mystery scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-  </body>
+        <!-- mystery scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    </body>
 
 </html>
